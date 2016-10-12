@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<page>
+  <tab name="Header"> this goes into master template
+    <control id="lbl_conferenceDatesLabel" type="Label" row="0" column="0" text="Conference Dates:" />
+    <control id="lbl_conferenceDatesData" type="Label" row="0" column="1" text="" />
+    <control id="lbl_conferenceVenueLabel" type="Label" row="1" column="0" text="Venue" />
+    <control id="lbl_conferenceVenueLabel" type="Label" row="1" column="1" text="Venue" />
+    <control id="hl_VenueMapLink" type="Hyperlink" href="#" NavigateUrl="#" Target="_blank" row="1" column="1" newline="true" textPosition="after">
+      <control id="img_conferenceVenueMapImg" type="Image" ImageUrl="filename" row="1" column="1" newline="false" />
+    </control>
+    <control id="lbl_conferenceCheckinLabel" type="Label" row="2" column="0" text="Hotel Check-in and Registration:" />
+    <control id="lbl_conferenceCheckinData" type="Label" row="2" column="1" text="" />
+    <control id="lbl_conferenceCheckinLabel" type="Label" row="2" column="0" text="Hotel Check-in and Registration:" />
+    <control id="lbl_conferenceCheckinData" type="Label" row="2" column="1" text="" />
+
+  </tab>
+  
+  
+</page>

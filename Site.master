@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title>Engineering Conference 2014 Administration Site</title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    <script type="text/javascript" src="../Scripts/jquery-1.11.0.min.js"></script>
+    <script src="../Scripts/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<%--    <script src="Scripts/jquery.balloon.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.shadow.js" type="text/javascript"></script>
+--%>    
+<script src="../Scripts/jquery.tile.js" type="text/javascript"></script>
+    <script src="../Scripts/cluetip/jquery.cluetip.min.js" type="text/javascript"></script>
+    <link href="../Scripts/cluetip/jquery.cluetip.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("input:text").focus(function () { $(this).select(); });
+        });
+
+    </script>
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server" defaultbutton="bn_DummyDefault" >
+<asp:ToolkitScriptManager runat="server" ID="ajaxScriptManager" EnablePartialRendering="true" EnablePageMethods="true" CombineScripts="false" >
+
+</asp:ToolkitScriptManager>  
+    <div class="page">
+        <div class="header">
+        </div>
+        <div class="main">
+            
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+    <asp:Button ID="bn_DummyDefault" runat="server" OnClientClick="return false;" CssClass="hidden" />
+    </div>
+    </form>
+</body>
+</html>

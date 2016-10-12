@@ -1,0 +1,38 @@
+Manage Events:
+
+Stored Procedures:
+sp_admin_GetAllConferenceEvents
+**MERGED** sp_admin_LoadEvent
+**MERGED** sp_admin_RemoveEvent
+**MERGED** sp_GetSelectedPapers
+**MERGED** sp_GetSelectedPosters
+**MERGED** sp_GetTechnicalPanels
+**MERGED** sp_ValidateNewEventDates
+**MERGED** sp_GetVenueIDFromRoomNameoParent
+**MERGED** sp_GetEventParentPath
+**MERGED** [sp_GetConferenceMetaData]
+**MERGED** sp_GetKTStaff
+**MERGED** sp_getExternalStaffUser
+**MERGED** sp_GetSpeakerAddOnInfo
+**MERGED** sp_LoadUserAddon
+
+Types:
+**MERGED** type_EventTable
+**MERGED** type_UserAddOnsTable
+
+
+Triggers:
+**Merged** [tbl_Events] trigger_EventDelete (prevents deleting events that have child events) 
+
+Functions
+**MERGED** fn_GetSpecialEventText
+**MERGED** fn_ValidateChildDatesToParent
+**MERGED** [fn_IsInvitee] ---> update (must clear from tbl_Invitees first then readd)
+
+Tables:
+**MERGED** tbl_EventTypes (schema and data)
+**MERGED** tbl_VenueEventRooms (schema and data)
+**MERGED** update tbl_Vendors (add KT in for vendor #1, replace vendor #2 w/ Hyatt Regency)
+**MERGED** upate tbl_Venue (remove auto-increment from primary key, update vendorID)
+**MERGED** upate tbl_Conference (udpate vendorID) will need to temporarily remove contstraint between tbl_Conf and tbl_Venue
+**MERGED** update tbl_Events (add new column 'isPublic' [bit]
